@@ -18,6 +18,8 @@ PUBLIC_KEY=<provided by changelly>
 
 
 ## Changelly Notes
+- The support button is hard to find, they are responsive but not very helpful. They kept redirecting me somewhere. I think this product is a side product to a main product
+- Their API does support a redirect flow approach
 - Talking to their API is a bit complicated, as it is convoluted way of signing the request.
 - They do not have sandbox. They recommend using prod and a network that has small fees, ex TRON
 - Payment creation can not be made with EUR/USD. We have to create them with crypto currency.
@@ -25,8 +27,9 @@ PUBLIC_KEY=<provided by changelly>
 - We can override success/fail redirect URL but NOT the callback URL. This means that only one env will be functional. Or we create a second account.
 - We can not fetch payments by our own ID but only by their Payment ID. This means we would have to store it.
 - There is not any kind of idempotency going on. You can create the same payment with the same arguments over and over.
-- Dashboard is kind of poor in the sense that you can not do much with it. You can not cancel a payment or anything like that.
+- Dashboard is kind of poor in the sense that you can not do much with it. You can not cancel a payment or anything like that. Or issue a new order from the dashboard.
 - Once the vendor goes through a cypto selection they are locked into it. Clicking on the link again does not offer to choose again
 - I'm not sure when do payments expire, I used the pending_deadline_at parameter but does not seem to work. At least I did not recieve a callback in due time.
 - By default the account is custodial and we need to withdraw manually (at least is how it looks like)
-- I did not test callbacks, 
+- I did not test callbacks, cause no test site.
+- The documentation is good enough to understand what is going on. It is generated from Redocly 
